@@ -1,13 +1,13 @@
-# Hotel Cancellation Prediction
+# Predicting Hotel Cancellations
 
 ## Background
 
-In this project, I will be working with a dataset containing reservation data for both a hotel in Lisbon, Portugal and a resort hotel in the Algarve region of Portugal. The dataset contains features such as the the length of stay, price, lead time, booking channel, and many more. For more information on the data, the link to the dataset and the link to the data dictionary are below.
+In this project, I will be working with a dataset containing reservation data for a hotel in Lisbon, Portugal and a resort hotel in the Algarve region of Portugal. The dataset contains features such as the the length of stay, price, lead time, booking channel, and more. For more information on the data, the link to the dataset and the link to the data dictionary are below.
 
 [Data Source: Kaggle](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) <br>
 [Data Dictionary](https://www.sciencedirect.com/science/article/pii/S2352340918315191)
 
-**Project Goal**: To correctly predict reservation cancellations. The target variable is binary variable that indicates whether the reservation was cancelled or not, so to predict this value, we will use classification methods such as **Logistic Regression**, **Random Forest Classifier**, and **XGBoost Classifier**. The primary scoring metric that I will use to compare models is the recall score for cancelled reservations. The recall score, or true positive rate, will tell us what percentage of cancelled reservations we predicted correctly. 
+**Project Goal**: To predict reservation cancellations. The target variable is binary variable that indicates whether the reservation was cancelled or not, so to predict this value, we will use classification methods such as **Logistic Regression**, **Random Forest Classifier**, and **XGBoost Classifier**. The primary scoring metric that I will use to compare models is the recall score for cancelled reservations. The recall score, or true positive rate, will tell us what percentage of cancelled reservations we predicted correctly. 
 
 
 ## Analysis Steps
@@ -28,11 +28,11 @@ To select features for the models, I use correlation and mutual information. The
 ![image](https://user-images.githubusercontent.com/100224330/173500466-9ae98762-a9ed-49f3-9055-afbc98b554f8.png)<br>
 <br>
 
-The Random Forest and XGBoost models perform the similarly as far as accuracy is concerned, but the XGBoost model performs slightly better when it comes to recall. We ideally would like to have greater recall for our models, but the XGBoost model performs well enough to be informative for the hotels to identify potential cancellations and proactively reach out to the guests with reminders or additional deal sweeteners to reduce the likelihood they cancel. Below is the chart showing which features were the most important to the model.
+The Random Forest and XGBoost models performed similarly as far as accuracy is concerned, but the XGBoost model performed slightly better when it comes to recall. We ideally would like to have greater recall for our models, but the XGBoost model performs well enough to be informative for the hotels to identify potential cancellations and proactively reach out to the guests with reminders or additional deal sweeteners to reduce the likelihood they cancel. Below is the chart showing which features were the most important to the model.
 
 ![image](https://user-images.githubusercontent.com/100224330/173502953-11d5ba50-c8e0-4e31-8e4c-9df2d91e4be3.png)
 
 The 3 most important features are the deposit type, the # of required parking spaces and the guest being from Portugal.
 - Not having a deposit down for a hotel room likely frees the guest up to consider other accomodations without penalty, so the importance of the deposit type makes sense. 
 - Arranging for required parking spaces likely suggests a guest is highly intent on visiting, or perhaps has more concrete travel plans that would be more difficult to cancel.
-- For people in Portugal, travel plans are likely less cumbersome than those of other guests from out of the country, so it's understandable that Portuguese guests could more easily cancel their reservations. To maximize the high-likelihood guest, the hotel group could look to do more advertising and promotion in other top guest origins outside of Portugal. To minimize the risk of losing local guests, the hotel group could run more promotional rates and look to offer some sort of loyalty rewards.
+- For people in Portugal, travel plans are likely less cumbersome than those of guests from out of the country, so it's understandable that Portuguese guests could more easily cancel their reservations. To maximize the high-likelihood guests, the hotel group could look to do more advertising and promotion in other top guest origins outside of Portugal. To minimize the risk of losing local guests, the hotel group could run more promotional rates and look to offer some sort of loyalty rewards.
