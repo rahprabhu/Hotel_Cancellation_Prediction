@@ -7,7 +7,7 @@ In this project, I will be working with a dataset containing reservation data fo
 [Data Source: Kaggle](https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand) <br>
 [Data Dictionary](https://www.sciencedirect.com/science/article/pii/S2352340918315191)
 
-**Project Goal**: To predict reservation cancellations. The target variable is binary variable that indicates whether the reservation was cancelled or not, so to predict this value, we will use classification methods such as **Logistic Regression**, **Random Forest Classifier**, and **XGBoost Classifier**. The primary scoring metric that I will use to compare models is the recall score for cancelled reservations. The recall score, or true positive rate, will tell us what percentage of cancelled reservations we predicted correctly. 
+**Project Goal**: To predict reservation cancellations. The target variable is a binary variable that indicates whether the reservation was cancelled or not, so to predict this value, we will use classification methods such as **Logistic Regression**, **Random Forest Classifier**, and **XGBoost Classifier**. The primary scoring metric that I will use to compare models is the recall score for cancelled reservations. The recall score, or true positive rate, will tell us what percentage of cancelled reservations we predicted correctly. 
 
 
 ## Analysis Steps
